@@ -49,7 +49,7 @@ dt = 2000;                                                   % Timesteps in calc
 delete(gcp('nocreate')); cd other/code; close all; rng(1); tic
 
 nn = 100000;
-n_elev = 10;
+n_elev = 30;
 
 %************* Setup for calculations **************
 elev = linspace(sink_elev,max_elev,n_elev);                        % Elevation of possible source area [m asl.]
@@ -241,7 +241,6 @@ parfor (j=1:Nsim,3)
     fAl = lambda_Al - rho*eint*100*e3_Al;
     NBe(ntime) = NBe(ntime) + a3_Be*exp(rho*100*burial(ntime)*e3_Be)/fBe;
     NAl(ntime) = NAl(ntime) + a3_Al*exp(rho*100*burial(ntime)*e3_Al)/fAl;
-
     
     for kk=(ntime-1):-1:1 % Go through all the burial timesteps from oldset to now.
 
