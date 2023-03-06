@@ -1,0 +1,3 @@
+P-PINI v1.02 - 6/3/23
+	- PPINI_analysis now outputs 10Be and 26Al produced post burial from the best fitted burial age and 	erosion rate
+	- PPINI_analysis now plots the post burial 10Be and 26Al on the scatterplot as a red dot
